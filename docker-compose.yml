@@ -1,7 +1,7 @@
 version: '3.8'
 # Postgresql container
 services:
-  nest-dev-db:
+  nest_db:
     image: postgres:13
     environment:
       POSTGRES_USER: ${DB_USER}
@@ -9,12 +9,3 @@ services:
       POSTGRES_DB: ${DB_NAME}
     ports:
       - "${DB_PORT}:5432"
-
-  nest-test-db:
-    image: postgres:13
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: pass123
-      POSTGRES_DB: nest-ms-db-test
-    ports:
-      - "5441:5432"
